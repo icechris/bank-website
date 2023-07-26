@@ -9,7 +9,7 @@
 </head>
 <body class= "bg-color-primary text-color-white tracking wider">
     <!-- Hero Section -->
-     <header>
+     <header class="sticky top-0 z-50">
         <nav class="container flex justify-between items-center">
             <div class=" py-5 text-color-secondary font-blod text-3xl">
                 <a href="#home">
@@ -57,9 +57,9 @@
 
         <section id="home" class="relative">
 
-            <div class="blob1"></div>
+            <div class="blob1 transition-transform animate-pulse duration-1000 ease-in-out"></div>
             
-            <div class="blob2"></div>
+            <div class="blob2 transition-transform animate-bounce duration-1000 ease-in-out"></div>
 
 
            <div class="container py-20">
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="md:w-1/2">
-                     <img   src="./img/hero4.png" alt="#">
+                     <img class=" transition-transform animate-pulse duration-1000 ease-out"  src="./img/hero4.png" alt="#">
                 </div>
 
 
@@ -125,9 +125,9 @@
         <section id="saving-money">
              <div class="container py-20 relative">
 
-                <div class="blob1"></div>
+                <div class="blob1 transition-transform animate-bounce duration-1000 ease-in-out"></div>
 
-                <div class="blob2"></div>
+                <div class="blob2 transition-transform animate-pulse duration-1000 ease-in-out"></div>
 
                 <div class="flex flex-col items-center justify-between md:flex-row">
                     <div class="md:w-1/2 mb-12">
@@ -207,7 +207,7 @@
              <!--review container  -->
              <div class="mt-8">
                 <div class="flex items-center justify-center flex-wrap">
-                    <img class=" h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic"  src="./img/user1.jpg" alt="" onclick="showReview()">
+                    <img class="user-pic active-pic h-20 w-20 rounded-full p-1 m-3 cursor-pointer "  src="./img/user1.jpg" alt="" onclick="showReview()">
                     <img class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"  src="./img/user2.jpg" alt="" onclick="showReview()">
                     <img class=" h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" src="./img/user3.jpg" alt="" onclick="showReview()">
                     <img class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"  src="./img/user4.jpg" alt="" onclick="showReview()">
@@ -662,29 +662,94 @@
                     <h1 class="title">Get In Touch</h1>
                 </div>
 
-                 <form action="">
+                 <form id="myForm"  reset(); return false();>
                     <div class="w-full m-auto text-center md:w-2/3">
                         <div class="text-color-primary-dark grid gap-6 mb:6 md:grid-cols-2">
-                             <input type="text" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Name" required>
+                             <input type="text" id="name" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Name" required>
 
-                             <input type="email" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Email" required>
+                             <input type="email" id="email" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Email" required>
 
-                             <input type="tel" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Phone" required>
+                             <input type="tel" id="tel" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Phone" required>
 
-                             <input type="text" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Company" required>
+                             <input type="text" id="company" class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Company" required>
                              
                              
                         </div>
 
-                        <textarea  rows="4"class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 mt-5 focus:outline-none focus:border-color-secondary"></textarea>
+                        <textarea id="message"  rows="4"class="bg-gray-50 border-gray-300 text-sm rounded-lg block w-full p-3 mt-5 focus:outline-none focus:border-color-secondary" placeholder="message"></textarea>
 
                         
-                        <button class="btn-primary enabled:hover:border-gray-400 disabled:opacity-75 mt-10">Send message</button>
+                        <button type="submit" class="btn-primary text-color-black mt-10" >
+                            
+                            Send message</button>
                     </div>
                  </form>
             </div>
          </section>
 <!-- End of contact form -->
+
+<!-- Footer -->
+      <section id="footer">
+        <div class="bg-color-primary-dark relative">
+            <div class="container py-10">
+                <div class="grid gap-10 md:grid-cols-3 pb-10">
+                      <div class="space-y-6">
+                           <h4 class="font-bold text-lg">About App</h4>
+                           <p class="leading relaxed"> This Should Be Used To Tell A Story And Include Any Testimonials You Might Have About Your Product Or Service For Your Clients</p>
+                           <div class="flex gap-5 items-center">
+                            <p>Follow Us</p>
+                            <i class="fa-brands fa-facebook-f cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary"></i>
+                        </div>
+                      </div>
+                    
+                      <div class="flex justify-between md:justify-around">
+                               <div class="space-y-6">
+                                <h4> Quick Links</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Home</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Features</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Testimonials</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Blog</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Pricing</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Contact</a></li>
+                                </ul>
+                               </div> 
+
+                                <div class="space-y-6 ">
+                                <h4 > Help</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">About Us</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Careers</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Partners</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Terms & Conditions</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Review</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="">Help</a></li>
+                                </ul>
+                               </div>   
+
+                            
+                      </div>
+
+                      <div class="space-y-3">
+                        <h4 class="font-bold text-lg">Newsletter</h4>
+                        <p class="leading-relaxed">Suscribe With Email And Loads Of News Will Be Sent To You</p>
+                        <div class="flex items-center">
+                            <input type="email" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+                            <button type="submit" class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3  rounded-r-md hover:opacity-90">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                       </div>
+                </div>
+                <div class="flex justify-center border-t pt-10 border-color-gray">
+                   <p> 2023 &copy;VersiBank. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+      </section>
      </main>
 
 
@@ -694,7 +759,7 @@
         // Mobile menu
         const hamburger = document.querySelector('#hamburger')
         const menu = document.querySelector('#menu')
-        const hLink = document.querySelectorAll('#hlink')
+        const hLink = document.querySelectorAll('#hLink')
         const faSolid = document.querySelector('.fa-solid')   
 
 
@@ -759,6 +824,85 @@
           card_3_front.classList.toggle('-rotate-y-180');
           card_3_back.classList.toggle('rotate-y-180'); 
         })
+
+        // Sticky Navbar
+        const navbar = document.querySelector('header');
+
+        window.onscroll = () => {
+            if(window.scrollY > 100){
+                navbar.classList.add('bg-color-primary');
+                navbar.classList.add('border-r');
+                navbar.classList.add('border-color-gray');
+            } else {
+                navbar.classList.remove('bg-color-primary');
+                navbar.classList.remove('border-r');
+                navbar.classList.remove('border-color-gray');
+            }
+        }
+     </script>
+     <script src=" https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+        // Use gmail smtp for local server only and not an online server
+      document.getElementById('myForm').addEventListener('submit', function(event){
+        event.preventDefault();
+        // Get the form Data
+        const formData = new FormData(event.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('tel');
+        const company = formData.get('company');
+        formData.get('message');
+
+        // Use Smtp Js to send the email
+        Email.send({
+            Host: 'smtp.elasticemail.com',  //Your server host name
+            Username: 'duoduchriistian36@gmail.com',   //Your SMTP username
+            Password: 'E05D83B2F134D8255F4228837E332B55DD16', //Your SMTP password 
+            To: 'duoduchristian36@gmail.com', //Reciepients email address 
+            From: email, //Senders email address 
+            Subject: 'Form submission from ' + name,      //Email subject 
+            Body:message,
+
+        }).then(
+            message => alert('Email sent successfully')
+        ).catch(
+            error => alert('Falied to send email: ' + error)
+        );
+
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         function sendEmail (){
+//             Email.send({
+//             Host : "smtp.elasticemail.com",
+//          Username : "duoduchristian36@gmail.com",
+//         Password : "password",
+//          To : 'duoduchristian36@gmail.com',
+//          From : document.getElementById("email").value,
+//          Subject : "This is the subject",
+//          Body : "Name" + document.getElementById("name").value       
+//           + "<br> Email: " + document.getElementById("email").value 
+//           + "<br> Phone no: " + document.getElementById("tel").value 
+//           + "<br> Company: " + document.getElementById("company").value 
+// }).then(
+//   message => console.log("message").catch(
+//     error => console.log('failed to send' + error)
+//   )
+// );
+//         }
      </script>
 </body>
 </html>
